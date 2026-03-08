@@ -10,8 +10,11 @@ public class Main {
         Path inputPath = Paths.get(System.getProperty("user.dir"), "input");
         Path outputPath = Paths.get(System.getProperty("user.dir"), "output");
 
-        try {
 
+        try {
+            if (!Files.exists(outputPath)) {
+                Files.createDirectories(outputPath);
+            }
             File inputDir = inputPath.toFile();
             File[] files = inputDir.listFiles((dir, name) -> name.toLowerCase().endsWith(".csv"));
 
