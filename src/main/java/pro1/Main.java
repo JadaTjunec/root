@@ -36,7 +36,7 @@ public class Main {
                     Fraction score = Fraction.parse(rawScore);
 
 
-                    outputLines.add(id + ";" + score.toString());
+                    outputLines.add(id + "," + score.toString());
                 }
 
 
